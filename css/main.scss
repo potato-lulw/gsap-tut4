@@ -17,7 +17,27 @@ section {
 .main-wrapper {
     display: flex;
     .section-1 {
-        background-color: antiquewhite;
+        display: flex;
+        .box1 {
+            width: 65%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .name {
+                font-size: 150px;
+            }
+        }
+        .box2 {
+            width: 35%;
+
+            img {
+                min-height: 300px;
+                height: auto;
+                width: 200px;
+                object-fit: cover;
+            }
+        }
+
         
     }
     
@@ -26,6 +46,8 @@ section {
         h1 {
             font-size: 100px;
         }
+
+        
     }
 }
 

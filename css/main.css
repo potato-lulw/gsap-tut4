@@ -6,6 +6,9 @@
 
 body {
   overflow-x: hidden;
+  font-family: "Yatra One", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 section {
@@ -18,7 +21,26 @@ section {
   display: flex;
 }
 .main-wrapper .section-1 {
-  background-color: antiquewhite;
+  display: flex;
+}
+.main-wrapper .section-1 .box1 {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-wrapper .section-1 .box1 .name {
+  font-size: 150px;
+}
+.main-wrapper .section-1 .box2 {
+  width: 35%;
+}
+.main-wrapper .section-1 .box2 img {
+  min-height: 300px;
+  height: auto;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-wrapper .section-2 {
   background-color: aqua;
