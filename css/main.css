@@ -17,6 +17,19 @@ section {
   flex-shrink: 0;
 }
 
+.japanese {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+}
+
+@keyframes loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
 .main-wrapper {
   display: flex;
 }
@@ -35,22 +48,173 @@ section {
 .main-wrapper .section-1 .box2 {
   width: 35%;
 }
-.main-wrapper .section-1 .box2 img {
+.main-wrapper .section-1 .box2 .image-gallery {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+.main-wrapper .section-1 .box2 .image-gallery .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-wrapper .section-1 .box2 .image-gallery .col img {
   min-height: 300px;
-  height: auto;
+  height: 300px;
   width: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  background-color: black;
+}
+.main-wrapper .section-1 .box2 .image-gallery .col1 img,
+.main-wrapper .section-1 .box2 .image-gallery .col3 img {
+  padding: 0.2rem 0.5rem;
+}
+.main-wrapper .section-1 .box2 .image-gallery .col2 img {
+  padding: 0.2rem 0;
 }
 .main-wrapper .section-2 {
-  background-color: aqua;
+  position: relative;
 }
-.main-wrapper .section-2 h1 {
+.main-wrapper .section-2 .side-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 65px;
+  height: 100%;
+  background-color: antiquewhite;
+  padding: 2rem;
+  position: absolute;
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: 50;
+}
+.main-wrapper .section-2 .side-bar div {
+  transform: rotate(-90deg);
+}
+.main-wrapper .section-2 .side-bar .des {
+  font-size: 10px;
+}
+.main-wrapper .section-2 .wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.main-wrapper .section-2 .wrapper .left {
+  padding: 0 0.8rem;
+  width: 65%;
+}
+.main-wrapper .section-2 .wrapper .left .line1 {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.main-wrapper .section-2 .wrapper .left .line1 .japanese {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+}
+.main-wrapper .section-2 .wrapper .left .line2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+.main-wrapper .section-2 .wrapper .left .line2 .num {
+  text-align: left;
+  width: 100%;
+}
+.main-wrapper .section-2 .wrapper .left .line2 .loop {
+  height: 50px;
+  width: 120px;
+  border-radius: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 65%;
+  left: 80%;
+  background: none;
+  border: 1px solid #444;
+  cursor: pointer;
+}
+.main-wrapper .section-2 .wrapper .left .line2 .loop .one {
+  animation: loop 10s linear infinite;
+  display: inline-block;
+  padding-left: 100%;
+  font-size: larger;
+}
+.main-wrapper .section-2 .wrapper .left .line2 .loop2 .one {
+  animation-delay: 5s;
+}
+.main-wrapper .section-2 .wrapper .left img {
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-wrapper .section-2 .wrapper .right {
+  width: 35%;
+}
+.main-wrapper .section-2 .wrapper .right .animated-text {
+  height: 120px;
+  background-color: black;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 100px;
+}
+.main-wrapper .section-2 .wrapper .right .animated-text .two {
+  display: flex;
+  gap: 1rem;
+  animation: loop 10s linear infinite;
+  display: inline-block;
+  width: 100%;
+}
+.main-wrapper .section-2 .wrapper .right .img-container {
+  width: 100%;
+  height: 780px;
+  padding: 0.5rem;
+  background-color: black;
+}
+.main-wrapper .section-2 .wrapper .right .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-wrapper .section-2 p {
+  font-size: 80px;
 }
 
 .section-3 {
   background-color: black;
   margin-top: -100vh;
   position: relative;
+  overflow: hidden;
+}
+.section-3 .rows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.section-3 .rows .row {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  height: 33.33%;
+  color: white;
+  font-size: 220px;
+}
+.section-3 .rows .row2 {
+  background-color: white !important;
+  color: black !important;
 }/*# sourceMappingURL=main.css.map */
